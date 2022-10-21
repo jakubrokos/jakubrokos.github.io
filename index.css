@@ -1,9 +1,11 @@
-body{
-    
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #F8EDE3;
 }
 
 .header{
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Secular One";
     background-color: #BDD2B6;
     padding: 5%;
     text-align: center;
@@ -13,6 +15,7 @@ body{
     overflow: hidden;
     background-color: #A2B29F;
 }
+
 .topnav a {
     float: left;
     display: block;
@@ -21,7 +24,32 @@ body{
     padding: 14px 16px;
     text-decoration: none;
 }
+
 .topnav a:hover {
     background-color: #798777;
     color: black;
+}
+
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+  
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
 }
