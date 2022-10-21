@@ -1,19 +1,19 @@
 body {
     font-family: Arial;
     padding: 10px;
-    background: #F8EDE3;
+    background: #f8ede3;
 }
 
 .header{
     font-family: "Secular One";
-    background-color: #BDD2B6;
+    background-color: #bdd2b6;
     padding: 5%;
     text-align: center;
 }
 
 .topnav{
     overflow: hidden;
-    background-color: #A2B29F;
+    background-color: #a2b29f;
 }
 
 .topnav a {
