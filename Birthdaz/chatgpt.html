@@ -8,12 +8,10 @@
 
     /* Style the card container */
     .card {
-      width: 300px;
-      height: 400px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      width: 80%; /* Use a percentage for width */
+      max-width: 400px; /* Set a maximum width */
+      margin: 0 auto; /* Center the card horizontally */
+      position: relative; /* Change from absolute to relative */
       /* Use a triad color scheme for the background */
       background: linear-gradient(135deg, #ff4d4d, #ff6666);
       border-radius: 10px;
@@ -28,9 +26,6 @@
     .content {
       width: 100%;
       height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -43,37 +38,42 @@
 
     /* Style the card title */
     .title {
-      font-size: 36px;
+      font-size: 4vw; /* Use a percentage of the viewport width for font size */
       font-weight: bold;
       /* Add some white space around the title */
-      margin: 20px;
+      margin: 1vw 2vw 1.5vw; /* Adjusted margin values */
     }
 
     /* Style the card message */
     .message {
-      font-size: 24px;
-      margin: 10px;
+      font-size: 2vw; /* Use a percentage of the viewport width for font size */
+      margin: 1vw;
     }
 
     /* Style the card image */
     .image {
-      width: 200px;
-      height: 200px;
+      width: 40%; /* Use a percentage for width */
+      max-width: 200px; /* Set a maximum width */
+      height: auto; /* Maintain aspect ratio */
       border-radius: 50%;
       object-fit: cover;
     }
 
     /* Style the card button */
     .button {
-      width: 100px;
-      height: 40px;
+      width: 20%; /* Adjust the width for smaller screens */
+      max-width: 80px; /* Adjust the maximum width for smaller screens */
+      height: auto; /* Maintain aspect ratio */
       border: none;
       border-radius: 20px;
       background-color: white;
-      color: #ff4d4d;
-      font-size: 18px;
+      color: #ff69b4;
+      font-size: 1.5vw; /* Use a percentage of the viewport width for font size */
       cursor: pointer;
       transition: background-color 0.3s, color 0.3s;
+      /* Adjusted margin values */
+      margin-top: 1.5vw;
+      margin-bottom: 2vw;
     }
 
     /* Style the card animation */
@@ -117,6 +117,39 @@
       50% {transform: rotate(0deg);}
       75% {transform: rotate(5deg);}
       100% {transform: rotate(0deg);}
+    }
+
+    /* Add a media query for smaller screens */
+    @media (max-width: 600px) {
+      .card {
+        width: 90%; /* Adjust the width for smaller screens */
+      }
+
+      .title {
+        font-size: 6vw; /* Adjust font size for smaller screens */
+        /* Adjusted margin values */
+        margin: 2vw 3vw 3vw;
+      }
+
+      .message {
+        font-size: 3vw; /* Adjust font size for smaller screens */
+        margin: 1.5vw; /* Adjust margin for smaller screens */
+      }
+
+      .image, .button {
+        width: 50%; /* Adjust the width for smaller screens */
+        max-width: 150px; /* Adjust the maximum width for smaller screens */
+        font-size: 3vw; /* Adjust font size for smaller screens */
+      }
+
+      .button {
+        width: 30%; /* Adjust the width for smaller screens */
+        max-width: 60px; /* Adjust the maximum width for smaller screens */
+        font-size: 2vw; /* Adjust font size for smaller screens */
+        /* Adjusted margin values */
+        margin-top: 2vw;
+        margin-bottom: 3vw;
+      }
     }
   </style>
 </head>

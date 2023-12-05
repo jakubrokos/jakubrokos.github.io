@@ -3,15 +3,17 @@
 <head>
   <title>Birthday Card</title>
   <style>
+    /* Import a premium font from Google Fonts */
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap');
+
     /* Style the card container */
     .card {
-      width: 300px;
-      height: 400px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: linear-gradient(135deg, #ff69b4, #ffb6c1);
+      width: 80%; /* Use a percentage for width */
+      max-width: 400px; /* Set a maximum width */
+      margin: 0 auto; /* Center the card horizontally */
+      position: relative; /* Change from absolute to relative */
+      /* Use a triad color scheme for the background */
+      background: linear-gradient(135deg, #ff4d4d, #ff6666);
       border-radius: 10px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       overflow: hidden;
@@ -24,49 +26,54 @@
     .content {
       width: 100%;
       height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-family: Arial, sans-serif;
+      /* Use the imported font for the text */
+      font-family: 'Roboto Slab', serif;
       color: white;
       text-align: center;
     }
 
     /* Style the card title */
     .title {
-      font-size: 36px;
+      font-size: 4vw; /* Use a percentage of the viewport width for font size */
       font-weight: bold;
+      /* Add some white space around the title */
+      margin: 1vw 2vw 1.5vw; /* Adjusted margin values */
     }
 
     /* Style the card message */
     .message {
-      font-size: 24px;
-      margin: 10px;
+      font-size: 2vw; /* Use a percentage of the viewport width for font size */
+      margin: 1vw;
     }
 
     /* Style the card image */
     .image {
-      width: 200px;
-      height: 200px;
+      width: 40%; /* Use a percentage for width */
+      max-width: 200px; /* Set a maximum width */
+      height: auto; /* Maintain aspect ratio */
       border-radius: 50%;
       object-fit: cover;
     }
 
     /* Style the card button */
     .button {
-      width: 100px;
-      height: 40px;
+      width: 20%; /* Adjust the width for smaller screens */
+      max-width: 80px; /* Adjust the maximum width for smaller screens */
+      height: auto; /* Maintain aspect ratio */
       border: none;
       border-radius: 20px;
       background-color: white;
       color: #ff69b4;
-      font-size: 18px;
+      font-size: 1.5vw; /* Use a percentage of the viewport width for font size */
       cursor: pointer;
       transition: background-color 0.3s, color 0.3s;
+      /* Adjusted margin values */
+      margin-top: 1.5vw;
+      margin-bottom: 2vw;
     }
 
     /* Style the card animation */
@@ -78,7 +85,71 @@
     /* Add hover effect to the button */
     .button:hover {
       background-color: #fff;
-      color: #ff69b4;
+      color: #ff4d4d;
+    }
+
+    /* Add some animation effects to the image and the button */
+    .image {
+      animation-name: bounce;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+
+    .button {
+      animation-name: shake;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+
+    /* Define the bounce animation */
+    @keyframes bounce {
+      0% {transform: translateY(0);}
+      50% {transform: translateY(-10px);}
+      100% {transform: translateY(0);}
+    }
+
+    /* Define the shake animation */
+    @keyframes shake {
+      0% {transform: rotate(0deg);}
+      25% {transform: rotate(-5deg);}
+      50% {transform: rotate(0deg);}
+      75% {transform: rotate(5deg);}
+      100% {transform: rotate(0deg);}
+    }
+
+    /* Add a media query for smaller screens */
+    @media (max-width: 600px) {
+      .card {
+        width: 90%; /* Adjust the width for smaller screens */
+      }
+
+      .title {
+        font-size: 6vw; /* Adjust font size for smaller screens */
+        /* Adjusted margin values */
+        margin: 2vw 3vw 3vw;
+      }
+
+      .message {
+        font-size: 3vw; /* Adjust font size for smaller screens */
+        margin: 1.5vw; /* Adjust margin for smaller screens */
+      }
+
+      .image, .button {
+        width: 50%; /* Adjust the width for smaller screens */
+        max-width: 150px; /* Adjust the maximum width for smaller screens */
+        font-size: 3vw; /* Adjust font size for smaller screens */
+      }
+
+      .button {
+        width: 30%; /* Adjust the width for smaller screens */
+        max-width: 60px; /* Adjust the maximum width for smaller screens */
+        font-size: 2vw; /* Adjust font size for smaller screens */
+        /* Adjusted margin values */
+        margin-top: 2vw;
+        margin-bottom: 3vw;
+      }
     }
   </style>
 </head>
@@ -92,7 +163,7 @@
       <!-- Create the card message element -->
       <p class="message">Wishing you a wonderful day!</p>
       <!-- Create the card image element -->
-      <img class="image" src="birthday.jpg" alt="Birthday image">
+      <img class="image" src="hilma.jpg" alt="Birthday image">
       <!-- Create the card button element -->
       <button class="button">OK</button>
     </div>
