@@ -1,5 +1,5 @@
 // Replace 'your_password' with the actual password
-const correctPassword = 'your_password';
+const correctPassword = 'Sommartider';
 
 function checkPassword() {
     const passwordInput = document.getElementById('password');
